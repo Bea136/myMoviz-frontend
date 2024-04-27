@@ -1,0 +1,53 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.title {
+  line-height: 1.15;
+  font-size: 2rem;
+padding-left: 5%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  background-color: #021334;
+  width: 100%;
+  margin-top: 0;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 50px
+}
+.likedMoviesBtn {
+  border: whitesmoke 1px solid;
+  background-color: #021334;
+  color: whitesmoke;
+  padding:15px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+.moviesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid blue; */
+  gap: 55px
+}
