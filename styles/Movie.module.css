@@ -4,6 +4,8 @@
   justify-content: center;
   align-items: center;
   min-height: 10vh;
+  max-height: 50vh;
+  width: 15vw;
   /* border: 1px solid red */
 }
 
@@ -15,6 +17,9 @@
 .poster {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width:15vw;
+
+
 }
 
 
