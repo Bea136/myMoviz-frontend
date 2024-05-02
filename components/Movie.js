@@ -38,39 +38,39 @@ function Movie(props) {
   }
   let cameraStyle = {}
   if (watchCount > 0) {
-    cameraStyle = { 'color': 'red' }
+    cameraStyle = { 'color': '#e74c3c' }
   }
   //LIKE OR UNLIKE FILMS
   const handleClickLiked = () => {
-    setLiked(!liked)
     props.updateLikedMovies(props.movieTitle)
+  }
+  let likeStyle = {}
+  if (liked) {
+    likeStyle = { 'color': '#e74c3c' }
+  }
+  if (props.isLiked === true) {
+    likeStyle = { 'color': '#e74c3c' }
   }
 
 
-let likeStyle = {}
-if (liked) {
-  likeStyle = { 'color': 'red' }
-}
-
-
-return (
-  <div>
-    <main className={styles.main}>
-      <img className={styles.poster} src={props.poster} alt={props.movieTitle} />
-      <h2 className={styles.movieTitle}>{props.movieTitle}</h2>
-      <h3 className={styles.description}>{props.description}</h3>
-      <div className={styles.starsContainer}>{stars}</div>
-      <p className={styles.vote}>({props.vote})</p>
-      <div className={styles.personalStarsContainer}>
-        {personalStars}({personalVote})
-      </div>
-      <div className={styles.viewCount}>
-        <FontAwesomeIcon className={styles.video} onClick={handleClickCamera} icon={faVideo} style={cameraStyle} />
-        ({watchCount})
-      </div>
-      <FontAwesomeIcon className={styles.like} onClick={handleClickLiked} icon={faHeart} style={likeStyle} />
-    </main>
-  </div>
-);
+  return (
+    <div>
+      <main className={styles.main}>
+        <img className={styles.poster} src={props.poster} alt={props.movieTitle} />
+        <h2 className={styles.movieTitle}>{props.movieTitle}</h2>
+        <h3 className={styles.description}>{props.description}</h3>
+        <div className={styles.starsContainer}>{stars}</div>
+        <p className={styles.vote}>({props.vote})</p>
+        <div className={styles.personalStarsContainer}>
+          {personalStars}({personalVote})
+        </div>
+        <div className={styles.viewCount}>
+          <FontAwesomeIcon className={styles.video} onClick={handleClickCamera} icon={faVideo} style={cameraStyle} />
+          ({watchCount})
+        </div>
+        <FontAwesomeIcon className={styles.like} onClick={handleClickLiked} icon={faHeart} style={likeStyle} />
+      </main>
+    </div>
+  );
 }
 export default Movie;
