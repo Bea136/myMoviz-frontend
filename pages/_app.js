@@ -5,7 +5,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>MyMovies</title>
+        <title>MyMoviz</title>
       </Head>
       <Component {...pageProps} />
     </>
