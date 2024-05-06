@@ -24,7 +24,6 @@ function Movie(props) {
   for (let j = 0; j < 10; j++) {
     const handleClickPersonalStar = () => {
       setPersonalVote(j + 1)
-      console.log(personalVote);
     }
     if (personalVote >= j + 1) {
       personalStars.push(<FontAwesomeIcon onClick={handleClickPersonalStar} key={j} className={styles.personalStars} icon={faStar} style={personalStarStyle = { 'color': 'blue' }} />)
@@ -52,21 +51,20 @@ function Movie(props) {
     likeStyle = { 'color': '#e74c3c' }
   }
 
-
   return (
     <div>
       <main className={styles.main}>
         <img className={styles.poster} src={props.poster} alt={props.movieTitle} />
         <h2 className={styles.movieTitle}>{props.movieTitle}</h2>
-        <h3 className={styles.description}>{props.description}</h3>
+        <h3 className={styles.description} >{props.description}</h3>
         <div className={styles.starsContainer}>{stars}</div>
         <p className={styles.vote}>({props.vote})</p>
         <div className={styles.personalStarsContainer}>
-          {personalStars}({personalVote})
+          {personalStars} ({personalVote})
         </div>
         <div className={styles.viewCount}>
-          <FontAwesomeIcon className={styles.video} onClick={handleClickCamera} icon={faVideo} style={cameraStyle} />
-          ({watchCount})
+          <FontAwesomeIcon className={styles.video} onClick={handleClickCamera} icon={faVideo} style={cameraStyle} /> 
+          <span> ({watchCount})</span>
         </div>
         <FontAwesomeIcon className={styles.like} onClick={handleClickLiked} icon={faHeart} style={likeStyle} />
       </main>

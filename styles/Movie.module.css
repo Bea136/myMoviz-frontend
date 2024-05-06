@@ -4,9 +4,7 @@
   justify-content: center;
   align-items:baseline;
   min-height: 10vh;
-  max-height: 50vh;
   width: 15vw;
-  /* border: 1px solid red */
 }
 .poster {
   border-top-left-radius: 10px;
@@ -15,6 +13,7 @@
 }
 .description{
   text-align: justify;
+  max-height: 30vh;
 }
 .personalStars {
   cursor: pointer;
