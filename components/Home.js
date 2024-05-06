@@ -14,7 +14,7 @@ function Home() {
 
   //FETCH MOVIES FROM BACKEND AT INITIALIZATION
   useEffect(() => {
-    fetch(`https://my-moviz-backend-eight-delta.vercel.app/movies`)
+    fetch(`http://localhost:3000/movies`)
       .then(response => response.json())
       .then(data => {
         setMoviesData(data.movies)
