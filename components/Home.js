@@ -71,12 +71,12 @@ function Home() {
             </Popover>
           </div>
         </header>
-        <body className={styles.body}>
+        <div className={styles.body}>
           <h1 className={styles.title}>LAST RELEASES</h1>
           <div className={styles.moviesContainer}>
             {movies}
           </div>
-        </body>
+        </div>
       </main>
     </div>
   );
