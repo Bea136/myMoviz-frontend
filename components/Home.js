@@ -34,7 +34,10 @@ function Home() {
   const movies = moviesData.map((movie, i) => {
     const isLiked = likedMovies.some(e => e === movie.title)
     const posterUrl = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
-    const description = `${movie.overview.substring(0, 250)}...`
+    let description = movie.overview
+    if (movie.overview.length >= 250) {
+      description = `${movie.overview.substring(0, 250)}...`
+    }
     return <Movie key={i} movieTitle={movie.title} poster={posterUrl} description={description} voteAverage={movie.vote_average} vote={movie.vote_count} updateLikedMovies={updateLikedMovies} isLiked={isLiked} />
   })
 
